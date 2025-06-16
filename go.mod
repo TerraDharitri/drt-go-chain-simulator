@@ -3,28 +3,42 @@ module github.com/TerraDharitri/drt-go-chain-simulator
 go 1.20
 
 require (
+	github.com/TerraDharitri/drt-go-chain-core v0.0.7
+	github.com/TerraDharitri/drt-go-chain-logger v0.0.4
 	github.com/btcsuite/websocket v0.0.0-20150119174127-31079b680792
-	github.com/gin-gonic/gin v1.10.0
-	github.com/TerraDharitri/drt-go-chain-core v1.2.24
-	github.com/TerraDharitri/drt-go-chain v1.8.12
-	github.com/TerraDharitri/drt-go-chain-logger v1.0.15
-	github.com/TerraDharitri/drt-go-chain-proxy v1.1.57
-	github.com/pelletier/go-toml v1.9.3
+	github.com/gin-gonic/gin v1.10.1
+	github.com/pelletier/go-toml v1.9.5
 	github.com/stretchr/testify v1.10.0
 	github.com/urfave/cli v1.22.16
 )
 
 require (
+	github.com/StackExchange/wmi v0.0.0-20190523213315-cbe66965904d // indirect
+	github.com/TerraDharitri/concurrent-map v0.0.2 // indirect
+	github.com/TerraDharitri/drt-go-bigint v0.0.3 // indirect
+	github.com/TerraDharitri/drt-go-chain v0.0.0-20250401112639-6c5f8bed1ec9
+	github.com/TerraDharitri/drt-go-chain-communication v0.0.4 // indirect
+	github.com/TerraDharitri/drt-go-chain-crypto v0.0.5 // indirect
+	github.com/TerraDharitri/drt-go-chain-es-indexer v0.0.6 // indirect
+	github.com/TerraDharitri/drt-go-chain-scenario v0.0.5 // indirect
+	github.com/TerraDharitri/drt-go-chain-storage v0.0.7 // indirect
+	github.com/TerraDharitri/drt-go-chain-vm v0.0.4 // indirect
+	github.com/TerraDharitri/drt-go-chain-vm-common v0.0.4 // indirect
+	github.com/TerraDharitri/drt-go-chain-vm-v1 v0.0.3 // indirect
+	github.com/TerraDharitri/drt-go-chain-vm-v2 v0.0.2 // indirect
+	github.com/TerraDharitri/drt-go-chain-vm-v3 v0.0.3 // indirect
 	github.com/TwiN/go-color v1.1.0 // indirect
 	github.com/beevik/ntp v1.3.0 // indirect
 	github.com/benbjohnson/clock v1.3.5 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
+	github.com/btcsuite/btcd v0.23.4 // indirect
 	github.com/btcsuite/btcd/btcec/v2 v2.3.2 // indirect
 	github.com/btcsuite/btcd/btcutil v1.1.3 // indirect
 	github.com/btcsuite/btcd/chaincfg/chainhash v1.0.1 // indirect
-	github.com/bytedance/sonic v1.11.6 // indirect
-	github.com/bytedance/sonic/loader v0.1.1 // indirect
+	github.com/bytedance/sonic v1.12.6 // indirect
+	github.com/bytedance/sonic/loader v0.2.1 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
+	github.com/chzyer/readline v1.5.1 // indirect
 	github.com/cloudwego/base64x v0.1.4 // indirect
 	github.com/cloudwego/iasm v0.2.0 // indirect
 	github.com/containerd/cgroups v1.1.0 // indirect
@@ -57,6 +71,7 @@ require (
 	github.com/golang/mock v1.6.0 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
+	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/google/gopacket v1.1.19 // indirect
 	github.com/google/gops v0.3.18 // indirect
 	github.com/google/pprof v0.0.0-20230602150820-91b7bce49751 // indirect
@@ -69,6 +84,7 @@ require (
 	github.com/hashicorp/golang-lru/v2 v2.0.2 // indirect
 	github.com/herumi/bls-go-binary v1.28.2 // indirect
 	github.com/huin/goupnp v1.2.0 // indirect
+	github.com/ianlancetaylor/demangle v0.0.0-20230524184225-eabc099b10ab // indirect
 	github.com/ipfs/boxo v0.8.1 // indirect
 	github.com/ipfs/go-cid v0.4.1 // indirect
 	github.com/ipfs/go-datastore v0.6.0 // indirect
@@ -79,8 +95,10 @@ require (
 	github.com/jbenet/go-temp-err-catcher v0.1.0 // indirect
 	github.com/jbenet/goprocess v0.1.4 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
+	github.com/keybase/go-ps v0.0.0-20190827175125-91aafc93ba19 // indirect
 	github.com/klauspost/compress v1.16.5 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.7 // indirect
+	github.com/knz/go-libedit v1.10.1 // indirect
 	github.com/koron/go-ssdp v0.0.4 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
 	github.com/libp2p/go-buffer-pool v0.1.0 // indirect
@@ -118,18 +136,6 @@ require (
 	github.com/multiformats/go-multihash v0.2.3 // indirect
 	github.com/multiformats/go-multistream v0.4.1 // indirect
 	github.com/multiformats/go-varint v0.0.7 // indirect
-	github.com/TerraDharitri/concurrent-map v0.1.4 // indirect
-	github.com/TerraDharitri/drt-go-chain-communication v1.1.1 // indirect
-	github.com/TerraDharitri/drt-go-chain-crypto v1.2.12 // indirect
-	github.com/TerraDharitri/drt-go-chain-es-indexer v1.7.16 // indirect
-	github.com/TerraDharitri/drt-go-chain-scenario v1.4.4 // indirect
-	github.com/TerraDharitri/drt-go-chain-storage v1.0.19 // indirect
-	github.com/TerraDharitri/drt-go-chain-vm-common v1.5.16 // indirect
-	github.com/TerraDharitri/drt-go-chain-vm v1.5.37 // indirect
-	github.com/TerraDharitri/drt-go-chain-vm-v1  v1.2.68 // indirect
-	github.com/TerraDharitri/drt-go-chain-vm-v2 v1.3.69 // indirect
-	github.com/TerraDharitri/drt-go-chain-vm-v3 v1.4.98 // indirect
-	github.com/TerraDharitri/drt-go-bigint v1.0.0 // indirect
 	github.com/onsi/ginkgo/v2 v2.11.0 // indirect
 	github.com/onsi/gomega v1.27.10 // indirect
 	github.com/opencontainers/runtime-spec v1.0.2 // indirect
@@ -152,6 +158,7 @@ require (
 	github.com/rogpeppe/go-internal v1.11.0 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/shirou/gopsutil v3.21.11+incompatible // indirect
+	github.com/shirou/gopsutil/v3 v3.21.2 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/syndtr/goleveldb v1.0.1-0.20220721030215-126854af5e6d // indirect
 	github.com/tidwall/gjson v1.18.0 // indirect
@@ -163,6 +170,7 @@ require (
 	github.com/ugorji/go/codec v1.2.12 // indirect
 	github.com/whyrusleeping/go-keyspace v0.0.0-20160322163242-5b898ac5add1 // indirect
 	github.com/whyrusleeping/timecache v0.0.0-20160911033111-cfcb2f1abfee // indirect
+	github.com/xlab/treeprint v1.0.0 // indirect
 	github.com/yusufpapurcu/wmi v1.2.2 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	go.opentelemetry.io/otel v1.14.0 // indirect
@@ -186,4 +194,5 @@ require (
 	gopkg.in/go-playground/validator.v8 v8.18.2 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	lukechampine.com/blake3 v1.2.1 // indirect
+	rsc.io/goversion v1.2.0 // indirect
 )
