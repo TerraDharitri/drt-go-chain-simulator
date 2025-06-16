@@ -1,6 +1,6 @@
 import sys
 
-from multiversx_sdk import (ProxyNetworkProvider, Token,
+from dharitri_sdk import (ProxyNetworkProvider, Token,
                             TokenManagementTransactionsFactory,
                             TokenManagementTransactionsOutcomeParser,
                             TransactionsFactoryConfig, UserSecretKey)

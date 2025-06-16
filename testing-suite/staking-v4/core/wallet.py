@@ -2,8 +2,8 @@
 from config import *
 import requests
 import json
-from multiversx_sdk_wallet import UserSigner
-from multiversx_sdk_core import Address
+from dharitri_sdk_wallet import UserSigner
+from dharitri_sdk_core import Address
 
 
 class Wallet:

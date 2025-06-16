@@ -2,7 +2,7 @@ import sys
 import time
 from pathlib import Path
 
-from multiversx_sdk import (ProxyNetworkProvider,
+from dharitri_sdk import (ProxyNetworkProvider,
                             SmartContractTransactionsFactory,
                             SmartContractTransactionsOutcomeParser,
                             TransactionsFactoryConfig, UserSecretKey)

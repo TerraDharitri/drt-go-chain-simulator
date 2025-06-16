@@ -1,5 +1,5 @@
 from pathlib import Path
-from multiversx_sdk_network_providers import ProxyNetworkProvider
+from dharitri_sdk_network_providers import ProxyNetworkProvider
 
 
 PROXY_PUBLIC_TESTNET = "https://testnet-gateway.dharitri.org"

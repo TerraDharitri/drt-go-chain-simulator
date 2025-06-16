@@ -1,7 +1,7 @@
 import sys
 import time
 
-from multiversx_sdk import (Address, ProxyNetworkProvider,
+from dharitri_sdk import (Address, ProxyNetworkProvider,
                             TransactionsFactoryConfig,
                             TransferTransactionsFactory, UserSecretKey)
 

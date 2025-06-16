@@ -7,7 +7,7 @@ from constants import STAKING_CONTRACT
 from constants import VALIDATOR_CONTRACT
 from helpers import base64_to_hex
 from helpers import base64_to_string
-from multiversx_sdk_core import Address
+from dharitri_sdk_core import Address
 from caching import force_reset_validator_statistics
 
 

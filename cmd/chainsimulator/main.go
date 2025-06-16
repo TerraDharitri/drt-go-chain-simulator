@@ -339,7 +339,7 @@ func fetchConfigs(skipDownload bool, cfg config.Config, nodeConfigs, proxyConfig
 	}
 
 	gitFetcher := git.NewGitFetcher()
-	configsFetcher, err := configs.NewConfigsFetcher(cfg.Config.Simulator.MxChainRepo, cfg.Config.Simulator.MxProxyRepo, gitFetcher)
+	configsFetcher, err := configs.NewConfigsFetcher(cfg.Config.Simulator.DrtChainRepo, cfg.Config.Simulator.DrtProxyRepo, gitFetcher)
 	if err != nil {
 		return err
 	}

@@ -4,7 +4,7 @@ import time
 from pathlib import Path
 from typing import Any
 
-from multiversx_sdk import (Address, DelegationTransactionsOutcomeParser,
+from dharitri_sdk import (Address, DelegationTransactionsOutcomeParser,
                             ProxyNetworkProvider, TransactionOnNetwork,
                             TransactionsFactoryConfig,
                             TransferTransactionsFactory, UserSecretKey)
