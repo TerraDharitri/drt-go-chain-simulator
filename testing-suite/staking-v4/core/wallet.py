@@ -35,10 +35,10 @@ class Wallet:
         return balance
 
 
-    def set_balance(self, egld_amount):
+    def set_balance(self, rewa_amount):
         details = {
             'address': f'{self.public_address()}',
-            'balance': f'{egld_amount}'
+            'balance': f'{rewa_amount}'
         }
 
         details_list = [details]

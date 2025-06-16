@@ -17,17 +17,17 @@ const (
 )
 
 type fetcher struct {
-	gitFetcher      GitHandler
-	mxChainNodeRepo string
-	mxChainProxy    string
+	gitFetcher       GitHandler
+	drtChainNodeRepo string
+	drtChainProxy    string
 }
 
 // NewConfigsFetcher will create a new instance of fetcher
-func NewConfigsFetcher(mxChainNodeRepo, mxChainProxy string, git GitHandler) (*fetcher, error) {
+func NewConfigsFetcher(drtChainNodeRepo, drtChainProxy string, git GitHandler) (*fetcher, error) {
 	return &fetcher{
-		mxChainNodeRepo: mxChainNodeRepo,
-		mxChainProxy:    mxChainProxy,
-		gitFetcher:      git,
+		drtChainNodeRepo: drtChainNodeRepo,
+		drtChainProxy:    drtChainProxy,
+		gitFetcher:       git,
 	}, nil
 }
 
@@ -41,10 +41,10 @@ func (f *fetcher) FetchProxyConfigs(info *debug.BuildInfo, pathWhereToPutConfigs
 		return nil
 	}
 
-	mxProxyTag := extractTag(info, f.mxChainProxy)
-	log.Info("fetching proxy configs...", "repo", f.mxChainProxy, "version", mxProxyTag)
+	drtProxyTag := extractTag(info, f.drtChainProxy)
+	log.Info("fetching proxy configs...", "repo", f.drtChainProxy, "version", drtProxyTag)
 
-	return f.fetchConfigFolder(f.mxChainProxy, mxProxyTag, pathWhereToPutConfigs, appProxy)
+	return f.fetchConfigFolder(f.drtChainProxy, drtProxyTag, pathWhereToPutConfigs, appProxy)
 }
 
 // FetchNodeConfigs will try to fetch the node configs
@@ -57,10 +57,10 @@ func (f *fetcher) FetchNodeConfigs(info *debug.BuildInfo, pathWhereToPutConfigs 
 		return nil
 	}
 
-	mxNodeTag := extractTag(info, f.mxChainNodeRepo)
-	log.Info("fetching node configs...", "repo", f.mxChainNodeRepo, "version", mxNodeTag)
+	drtNodeTag := extractTag(info, f.drtChainNodeRepo)
+	log.Info("fetching node configs...", "repo", f.drtChainNodeRepo, "version", drtNodeTag)
 
-	return f.fetchConfigFolder(f.mxChainNodeRepo, mxNodeTag, pathWhereToPutConfigs, appNode)
+	return f.fetchConfigFolder(f.drtChainNodeRepo, drtNodeTag, pathWhereToPutConfigs, appNode)
 }
 
 func (f *fetcher) fetchConfigFolder(repo string, version string, pathWhereToSaveConfig string, app string) error {

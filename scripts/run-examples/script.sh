@@ -38,8 +38,8 @@ run_python_script ../../examples/staking staking.py
 # run adder example
 run_python_script ../../examples/contracts/adder/ adder.py
 
-# run wrapped egld example
-run_python_script ../../examples/contracts/wrappedegld wrapped-egld.py
+# run wrapped rewa example
+run_python_script ../../examples/contracts/wrappedrewa wrapped-rewa.py
 
 # run dcdt create example
 run_python_script ../../examples/dcdt/ issue-fungible.py

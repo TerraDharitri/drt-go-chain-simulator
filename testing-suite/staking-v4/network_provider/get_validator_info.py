@@ -15,7 +15,7 @@ def get_bls_key_status(owner_public_key_in_hex: list[str]):
     key_status_pair = {}
 
     post_body = {
-        "scAddress": "erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqplllst77y4l",
+        "scAddress": "drt1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqplllskzf8kp",
         "funcName": "getBlsKeysStatus",
         "args": owner_public_key_in_hex
     }
@@ -64,7 +64,7 @@ def get_owner(public_validator_key: list[str]) -> str:
     address = address_list[0]
 
     address = base64_to_hex(address)
-    address = Address.from_hex(address, "erd").to_bech32()
+    address = Address.from_hex(address, "drt").to_bech32()
 
     return address
 

@@ -12,15 +12,15 @@ import (
 )
 
 const (
-	mxNodeRepo  = "https://github.com/TerraDharitri/drt-go-chain"
-	mxProxyRepo = "https://github.com/TerraDharitri/drt-go-chain-proxy"
+	drtNodeRepo  = "https://github.com/TerraDharitri/drt-go-chain"
+	drtProxyRepo = "https://github.com/TerraDharitri/drt-go-chain-proxy"
 )
 
 var expectedErr = errors.New("expected error")
 
 func TestConfigsFetcher(t *testing.T) {
 	t.Run("FetchProxyConfigs dir already exists should early exit", func(t *testing.T) {
-		cf, _ := NewConfigsFetcher(mxNodeRepo, mxProxyRepo, &testscommon.GitFetcherStub{
+		cf, _ := NewConfigsFetcher(drtNodeRepo, drtProxyRepo, &testscommon.GitFetcherStub{
 			CloneCalled: func(r, d string) error {
 				require.Fail(t, "should have not been called")
 				return nil
@@ -39,7 +39,7 @@ func TestConfigsFetcher(t *testing.T) {
 	})
 	t.Run("FetchProxyConfigs Clone error should error", func(t *testing.T) {
 		dir := path.Join(t.TempDir(), "shouldWorkTest")
-		cf, _ := NewConfigsFetcher(mxNodeRepo, mxProxyRepo, &testscommon.GitFetcherStub{
+		cf, _ := NewConfigsFetcher(drtNodeRepo, drtProxyRepo, &testscommon.GitFetcherStub{
 			CloneCalled: func(r, d string) error {
 				return expectedErr
 			},
@@ -57,7 +57,7 @@ func TestConfigsFetcher(t *testing.T) {
 	})
 	t.Run("FetchProxyConfigs Checkout error should error", func(t *testing.T) {
 		dir := path.Join(t.TempDir(), "shouldWorkTest")
-		cf, _ := NewConfigsFetcher(mxNodeRepo, mxProxyRepo, &testscommon.GitFetcherStub{
+		cf, _ := NewConfigsFetcher(drtNodeRepo, drtProxyRepo, &testscommon.GitFetcherStub{
 			CheckoutCalled: func(repoDir string, commitHashOrBranch string) error {
 				return expectedErr
 			},
@@ -75,7 +75,7 @@ func TestConfigsFetcher(t *testing.T) {
 	})
 	t.Run("FetchProxyConfigs errors while copying should error", func(t *testing.T) {
 		dir := path.Join(t.TempDir(), "shouldWorkTest")
-		cf, _ := NewConfigsFetcher(mxNodeRepo, mxProxyRepo, &testscommon.GitFetcherStub{
+		cf, _ := NewConfigsFetcher(drtNodeRepo, drtProxyRepo, &testscommon.GitFetcherStub{
 			CloneCalled: func(r, d string) error {
 				return nil
 			},
@@ -97,7 +97,7 @@ func TestConfigsFetcher(t *testing.T) {
 	})
 	t.Run("FetchProxyConfigs should work", func(t *testing.T) {
 		dir := path.Join(t.TempDir(), "shouldWorkTest")
-		cf, _ := NewConfigsFetcher(mxNodeRepo, mxProxyRepo, &testscommon.GitFetcherStub{
+		cf, _ := NewConfigsFetcher(drtNodeRepo, drtProxyRepo, &testscommon.GitFetcherStub{
 			CloneCalled: func(r, d string) error {
 				err := os.MkdirAll(path.Join(os.TempDir(), "repo/cmd/proxy/config"), os.ModePerm)
 				require.NoError(t, err)
@@ -121,7 +121,7 @@ func TestConfigsFetcher(t *testing.T) {
 		require.Nil(t, err)
 	})
 	t.Run("FetchNodeConfigs dir already exists should early exit", func(t *testing.T) {
-		cf, _ := NewConfigsFetcher(mxNodeRepo, mxProxyRepo, &testscommon.GitFetcherStub{
+		cf, _ := NewConfigsFetcher(drtNodeRepo, drtProxyRepo, &testscommon.GitFetcherStub{
 			CloneCalled: func(r, d string) error {
 				require.Fail(t, "should have not been called")
 				return nil
@@ -140,7 +140,7 @@ func TestConfigsFetcher(t *testing.T) {
 	})
 	t.Run("FetchNodeConfigs should work", func(t *testing.T) {
 		dir := path.Join(t.TempDir(), "shouldWorkTest")
-		cf, _ := NewConfigsFetcher(mxNodeRepo, mxProxyRepo, &testscommon.GitFetcherStub{
+		cf, _ := NewConfigsFetcher(drtNodeRepo, drtProxyRepo, &testscommon.GitFetcherStub{
 			CloneCalled: func(r, d string) error {
 				err := os.MkdirAll(path.Join(os.TempDir(), "repo/cmd/node/config"), os.ModePerm)
 				require.NoError(t, err)
