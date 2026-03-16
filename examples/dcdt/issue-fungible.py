@@ -1,9 +1,9 @@
 import sys
 
-from dharitri_sdk import (ProxyNetworkProvider, Token,
-                            TokenManagementTransactionsFactory,
-                            TokenManagementTransactionsOutcomeParser,
-                            TransactionsFactoryConfig, UserSecretKey)
+from dharitri_py_sdk import (ProxyNetworkProvider, Token,
+                               TokenManagementTransactionsFactory,
+                               TokenManagementTransactionsOutcomeParser,
+                               TransactionsFactoryConfig, UserSecretKey)
 
 SIMULATOR_URL = "http://localhost:8085"
 GENERATE_BLOCKS_UNTIL_TX_PROCESSED = "simulator/generate-blocks-until-transaction-processed"

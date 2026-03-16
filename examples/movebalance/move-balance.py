@@ -1,9 +1,9 @@
 import sys
 import time
 
-from dharitri_sdk import (Address, ProxyNetworkProvider,
-                            TransactionsFactoryConfig,
-                            TransferTransactionsFactory, UserSecretKey)
+from dharitri_py_sdk import (Address, ProxyNetworkProvider,
+                               TransactionsFactoryConfig,
+                               TransferTransactionsFactory, UserSecretKey)
 
 SIMULATOR_URL = "http://localhost:8085"
 GENERATE_BLOCKS_URL = "simulator/generate-blocks"

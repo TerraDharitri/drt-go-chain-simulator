@@ -1,6 +1,6 @@
 from typing import Any, Dict, Sequence
 
-from dharitri_sdk import ProxyNetworkProvider
+from dharitri_py_sdk import ProxyNetworkProvider
 
 SIMULATOR_URL = "http://localhost:8085"
 SET_STATE_URL = "simulator/set-state-overwrite"

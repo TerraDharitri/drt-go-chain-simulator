@@ -3,9 +3,9 @@ import sys
 import time
 from pathlib import Path
 
-from dharitri_sdk import (Address, ProxyNetworkProvider,
-                            SmartContractTransactionsFactory, Token,
-                            TransactionsFactoryConfig, UserSecretKey)
+from dharitri_py_sdk import (Address, ProxyNetworkProvider,
+                               SmartContractTransactionsFactory, Token,
+                               TransactionsFactoryConfig, UserSecretKey)
 
 SIMULATOR_URL = "http://localhost:8085"
 GENERATE_BLOCKS_UNTIL_EPOCH_REACHED_URL = "simulator/generate-blocks-until-epoch-reached"

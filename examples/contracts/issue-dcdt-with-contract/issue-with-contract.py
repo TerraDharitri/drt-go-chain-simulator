@@ -2,10 +2,10 @@ import sys
 import time
 from pathlib import Path
 
-from dharitri_sdk import (ProxyNetworkProvider,
-                            SmartContractTransactionsFactory,
-                            SmartContractTransactionsOutcomeParser,
-                            TransactionsFactoryConfig, UserSecretKey)
+from dharitri_py_sdk import (ProxyNetworkProvider,
+                               SmartContractTransactionsFactory,
+                               SmartContractTransactionsOutcomeParser,
+                               TransactionsFactoryConfig, UserSecretKey)
 
 SIMULATOR_URL = "http://localhost:8085"
 GENERATE_BLOCKS_URL = "/simulator/generate-blocks"

@@ -4,10 +4,10 @@ import time
 from pathlib import Path
 from typing import Any
 
-from dharitri_sdk import (Address, DelegationTransactionsOutcomeParser,
-                            ProxyNetworkProvider, TransactionOnNetwork,
-                            TransactionsFactoryConfig,
-                            TransferTransactionsFactory, UserSecretKey)
+from dharitri_py_sdk import (Address, DelegationTransactionsOutcomeParser,
+                               ProxyNetworkProvider, TransactionOnNetwork,
+                               TransactionsFactoryConfig,
+                               TransferTransactionsFactory, UserSecretKey)
 
 SIMULATOR_URL = "http://localhost:8085"
 INITIAL_WALLETS_URL = "simulator/initial-wallets"
