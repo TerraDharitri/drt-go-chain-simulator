@@ -12,11 +12,11 @@ RUN go build -o chainsimulator
 
 RUN mkdir -p /lib_amd64 /lib_arm64
 
-RUN cp $(go list -m -f '{{.Dir}}' github.com/TerraDharitri/drt-chain-vm-v1_4)/wasmer/libwasmer_linux_amd64.so /lib_amd64/
-RUN cp $(go list -m -f '{{.Dir}}' github.com/TerraDharitri/drt-chain-vm)/wasmer2/libvmexeccapi.so /lib_amd64/
+RUN cp $(go list -m -f '{{.Dir}}' github.com/TerraDharitri/drt-go-chain-vm-v1_4)/wasmer/libwasmer_linux_amd64.so /lib_amd64/
+RUN cp $(go list -m -f '{{.Dir}}' github.com/TerraDharitri/drt-go-chain-vm)/wasmer2/libvmexeccapi.so /lib_amd64/
 
-RUN cp $(go list -m -f '{{.Dir}}' github.com/TerraDharitri/drt-chain-vm-v1_4)/wasmer/libwasmer_linux_arm64_shim.so /lib_arm64/
-RUN cp $(go list -m -f '{{.Dir}}' github.com/TerraDharitri/drt-chain-vm)/wasmer2/libvmexeccapi_arm.so /lib_arm64/
+RUN cp $(go list -m -f '{{.Dir}}' github.com/TerraDharitri/drt-go-chain-vm-v1_4)/wasmer/libwasmer_linux_arm64_shim.so /lib_arm64/
+RUN cp $(go list -m -f '{{.Dir}}' github.com/TerraDharitri/drt-go-chain-vm)/wasmer2/libvmexeccapi_arm.so /lib_arm64/
 
 
 FROM ubuntu:22.04
