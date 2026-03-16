@@ -86,7 +86,7 @@ func (f *fetcher) fetchConfigFolder(repo string, version string, pathWhereToSave
 
 func extractTag(info *debug.BuildInfo, repo string) string {
 	for _, dep := range info.Deps {
-		if strings.Contains(repo, dep.Path) {
+		if strings.HasSuffix(repo, dep.Path) {
 			return extractVersionOrCommit(dep.Version)
 		}
 	}
