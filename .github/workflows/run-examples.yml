@@ -2,7 +2,7 @@ name: Run examples
 
 on:
   push:
-    branches: [ main, feat/*, rc/* ]
+    branches: [ main, feat/*, rc/*, dev ]
   pull_request:
     branches: [ main, feat/*, rc/* ]
 
