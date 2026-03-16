@@ -12,11 +12,11 @@ RUN go build -o chainsimulator
 
 RUN mkdir -p /lib_amd64 /lib_arm64
 
-RUN cp /go/pkg/mod/github.com/!terra!dharitri/$(cat /terradharitri/go.sum | grep drt-chain-vm-v | sort -n | tail -n -1 | awk -F '/' '{print$3}' | sed 's/ /@/g')/wasmer/libwasmer_linux_amd64.so /lib_amd64/
-RUN cp /go/pkg/mod/github.com/!terra!dharitri/$(cat /terradharitri/go.sum | grep drt-go-chain-vm | sort -n | tail -n -1 | awk -F '/' '{print$3}' | sed 's/ /@/g')/wasmer2/libvmexeccapi.so /lib_amd64/
+RUN cp $(go list -m -f '{{.Dir}}' github.com/TerraDharitri/drt-chain-vm-v)/wasmer/libwasmer_linux_amd64.so /lib_amd64/
+RUN cp $(go list -m -f '{{.Dir}}' github.com/TerraDharitri/drt-chain-vm-v)/wasmer2/libvmexeccapi.so /lib_amd64/
 
-RUN cp /go/pkg/mod/github.com/!terra!dharitri/$(cat /terradharitri/go.sum | grep drt-chain-vm-v | sort -n | tail -n -1 | awk -F '/' '{print$3}' | sed 's/ /@/g')/wasmer/libwasmer_linux_arm64_shim.so /lib_arm64/
-RUN cp /go/pkg/mod/github.com/!terra!dharitri/$(cat /terradharitri/go.sum | grep drt-go-chain-vm | sort -n | tail -n -1 | awk -F '/' '{print$3}' | sed 's/ /@/g')/wasmer2/libvmexeccapi_arm.so /lib_arm64/
+RUN cp $(go list -m -f '{{.Dir}}' github.com/TerraDharitri/drt-chain-vm-v)/wasmer/libwasmer_linux_arm64_shim.so /lib_arm64/
+RUN cp $(go list -m -f '{{.Dir}}' github.com/TerraDharitri/drt-chain-vm-v)/wasmer2/libvmexeccapi_arm.so /lib_arm64/
 
 
 FROM ubuntu:22.04
