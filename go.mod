@@ -3,7 +3,7 @@ module github.com/TerraDharitri/drt-go-chain-simulator
 go 1.23
 
 require (
-	github.com/TerraDharitri/drt-go-chain v0.0.0-20260316055529-72cd5ea22517
+	github.com/TerraDharitri/drt-go-chain v0.0.0-20260317064220-836c2624b0ad
 	github.com/TerraDharitri/drt-go-chain-core v1.0.2
 	github.com/TerraDharitri/drt-go-chain-logger v1.0.0
 	github.com/TerraDharitri/drt-go-chain-proxy v1.0.0
