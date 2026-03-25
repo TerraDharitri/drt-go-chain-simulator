@@ -1,1 +1,0 @@
-RUN cp $(go list -m -f '{{.Dir}}' github.com/TerraDharitri/drt-chain-vm-v)/wasmer/libwasmer_linux_amd64.so /lib_amd64/
